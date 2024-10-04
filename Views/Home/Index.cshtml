@@ -1,0 +1,29 @@
+﻿@model LR5.Models.FormModels
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<hr />
+
+<div>
+    <h2>Заповніть форму</h2>
+    <form asp-action="Submit" method="post">
+        <div>
+            <label>Введіть значення:</label>
+            <input type="text" asp-for="Value" required />
+        </div>
+        <div>
+            <label>Оберіть дату для вичерпання Cookies:</label>
+            <input type="datetime-local" asp-for="ExpirationDate" required />
+        </div>
+        <div>
+            <button type="submit">Надіслати</button>
+        </div>
+    </form>
+</div>
